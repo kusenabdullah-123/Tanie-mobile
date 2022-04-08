@@ -7,6 +7,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: const Text('Tanie'),
           backgroundColor: const Color.fromRGBO(54, 176, 132, 1),
           elevation: 0,
@@ -19,7 +20,7 @@ class MainScreen extends StatelessWidget {
           ],
         ),
         body: SafeArea(
-            child: Row(
+            child: Column(
           children: [
             Container(
               child: Column(
@@ -42,6 +43,30 @@ class MainScreen extends StatelessWidget {
                               decoration: InputDecoration(
                                 fillColor: Colors.white,
                                 filled: true,
+                                suffixIcon: IconButton(
+                                  icon: const Icon(Icons.search_outlined),
+                                  tooltip: 'Search',
+                                  onPressed: () => showDialog<String>(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        AlertDialog(
+                                      title: const Text('Searching...'),
+                                      content: const Text('Welcome to Search'),
+                                      actions: <Widget>[
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(context, 'Cancel'),
+                                          child: const Text('Cancel'),
+                                        ),
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(context, 'OK'),
+                                          child: const Text('OK'),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
                                 focusedBorder: const OutlineInputBorder(
                                     borderSide:
                                         BorderSide(color: Colors.white)),
@@ -53,14 +78,6 @@ class MainScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          IconButton(
-                            icon: const Icon(
-                              Icons.search,
-                              color: Colors.white,
-                            ),
-                            tooltip: 'Notification',
-                            onPressed: () {},
-                          ),
                         ],
                       ),
                     )
@@ -69,6 +86,31 @@ class MainScreen extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 1,
               decoration:
                   const BoxDecoration(color: Color.fromRGBO(54, 176, 132, 1)),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                height: 123,
+                width: 342,
+                child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const <Widget>[
+                        Text(
+                          "6 Manfaat buah jeruk salah satunya menurunkan kolesterol",
+                          style: TextStyle(color: Colors.white, fontSize: 14),
+                        ),
+                        Text(
+                          "Mengonsumi Buah-Buahan Merupakan Satu Dari Sekian Cara Untuk Menjaga Kesehatan Tubuh.",
+                          style: TextStyle(color: Colors.white, fontSize: 12),
+                        )
+                      ],
+                    )),
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/orange.png'))),
+              ),
             )
           ],
         )));
