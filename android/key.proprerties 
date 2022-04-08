@@ -1,0 +1,4 @@
+storePassword=tanie123
+keyPassword=tanie123
+keyAlias=tanie
+storeFile=/android/tanie.jks
