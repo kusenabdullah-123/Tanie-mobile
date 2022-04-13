@@ -1,65 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'dart:ui';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
-  List<Padding> getSlider() {
-    return [
-      Padding(
-        padding: const EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
-        child: Container(
-          height: 150,
-          child: Padding(
-              padding: const EdgeInsets.only(top: 22, bottom: 18, left: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
-                  Text(
-                    "6 Manfaat buah jeruk salah satunya menurunkan kolesterol",
-                    style: TextStyle(color: Colors.white, fontSize: 13),
-                  ),
-                  Text(
-                    "Mengonsumi Buah-Buahan Merupakan Satu Dari Sekian Cara Untuk Menjaga Kesehatan Tubuh.",
-                    style: TextStyle(color: Colors.white, fontSize: 11),
-                  )
-                ],
-              )),
-          decoration: const BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/slider1.png'))),
-        ),
-      ),
-      Padding(
-        padding: const EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
-        child: Container(
-          height: 150,
-          child: Padding(
-              padding: const EdgeInsets.only(top: 22, bottom: 18, left: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
-                  Text(
-                    "Produksi Padi Meningkat, Begini Tanggapan Lesti",
-                    style: TextStyle(color: Colors.white, fontSize: 13),
-                  ),
-                  Text(
-                    "Mengonsumi Buah-Buahan Merupakan Satu Dari Sekian Cara Untuk Menjaga Kesehatan Tubuh.",
-                    style: TextStyle(color: Colors.white, fontSize: 11),
-                  )
-                ],
-              )),
-          decoration: const BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/slider2.png'))),
-        ),
-      ),
-    ];
-  }
+import 'package:flutter/material.dart';
+
+class MarketScreen extends StatelessWidget {
+  const MarketScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: const Text('Tanie'),
+          title: const Text('Harga Pasar'),
           backgroundColor: const Color.fromRGBO(54, 176, 132, 1),
           elevation: 0,
           actions: <Widget>[
@@ -83,7 +34,7 @@ class MainScreen extends StatelessWidget {
                         padding:
                             EdgeInsets.symmetric(horizontal: 5, vertical: 5),
                         child: Text(
-                          "Teman Bertani mu",
+                          "Informasi harga Pasar",
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
@@ -133,6 +84,11 @@ class MainScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
+                            IconButton(
+                              icon: const Icon(Icons.align_horizontal_right),
+                              onPressed: () {},
+                              color: Colors.white,
+                            )
                           ],
                         ),
                       )
@@ -145,113 +101,21 @@ class MainScreen extends StatelessWidget {
                         bottomLeft: Radius.circular(8),
                         bottomRight: Radius.circular(8))),
               ),
-              CarouselSlider(
-                  options: CarouselOptions(height: 140), items: getSlider()),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                padding: const EdgeInsets.only(right: 5, top: 10, left: 5),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Padding(
-                      padding: EdgeInsets.only(bottom: 10),
-                      child: Text("Blogs"),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                child: const Padding(
-                                  padding: EdgeInsets.only(top: 15),
-                                  child: Text(
-                                    "Harga kebutuhan pangan melesat, Begini tanggapan Lesti",
-                                    style: TextStyle(fontSize: 10),
-                                  ),
-                                ),
-                                height: 45,
-                                width: MediaQuery.of(context).size.width * 0.9,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    gradient: const LinearGradient(
-                                      stops: [
-                                        0.59,
-                                        0.80,
-                                      ],
-                                      begin: Alignment.bottomCenter,
-                                      end: Alignment.topCenter,
-                                      colors: [
-                                        Color.fromRGBO(255, 255, 255, 1),
-                                        Color.fromRGBO(255, 255, 255, 0.5),
-                                      ],
-                                    )),
-                              )
-                            ],
-                          ),
-                          height: MediaQuery.of(context).size.height * 0.25,
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage('assets/img1.png'))),
-                        ),
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.25,
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                child: const Padding(
-                                  padding: EdgeInsets.only(top: 15),
-                                  child: Text(
-                                    "Harga kebutuhan pangan melesat, Begini tanggapan Lesti",
-                                    style: TextStyle(fontSize: 10),
-                                  ),
-                                ),
-                                height: 45,
-                                width: MediaQuery.of(context).size.width * 0.9,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    gradient: const LinearGradient(
-                                      stops: [
-                                        0.59,
-                                        0.80,
-                                      ],
-                                      begin: Alignment.bottomCenter,
-                                      end: Alignment.topCenter,
-                                      colors: [
-                                        Color.fromRGBO(255, 255, 255, 1),
-                                        Color.fromRGBO(255, 255, 255, 0.5),
-                                      ],
-                                    )),
-                              )
-                            ],
-                          ),
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage('assets/img2.png'))),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(bottom: 10),
-                      child: Text("Harga pasar"),
+                      padding: EdgeInsets.only(top: 5, bottom: 5),
+                      child: Text(
+                        'Jawa timur',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
                     Container(
-                        height: 125,
-                        width: MediaQuery.of(context).size.width * 0.90,
+                        height: 127,
+                        width: MediaQuery.of(context).size.width * 0.95,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
@@ -277,8 +141,8 @@ class MainScreen extends StatelessWidget {
                           ),
                         )),
                     Container(
-                        height: 125,
-                        width: MediaQuery.of(context).size.width * 0.90,
+                        height: 127,
+                        width: MediaQuery.of(context).size.width * 0.95,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
@@ -291,7 +155,7 @@ class MainScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
                               Text(
-                                "Cabai Hijau  Kecil",
+                                "Gula Pasir",
                                 style: TextStyle(fontSize: 12),
                               ),
                               Text(
@@ -304,8 +168,8 @@ class MainScreen extends StatelessWidget {
                           ),
                         )),
                     Container(
-                        height: 125,
-                        width: MediaQuery.of(context).size.width * 0.90,
+                        height: 127,
+                        width: MediaQuery.of(context).size.width * 0.95,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
@@ -318,7 +182,7 @@ class MainScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
                               Text(
-                                "Cabai Hijau  Kecil",
+                                "MInyak Goreng",
                                 style: TextStyle(fontSize: 12),
                               ),
                               Text(

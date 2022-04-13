@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bottom_bar/bottom_bar.dart';
 import 'mainscreen.dart';
 import 'about.dart';
+import 'market.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -21,6 +22,7 @@ class _HomeState extends State<Home> {
         controller: _pageController,
         children: const [
           MainScreen(),
+          MarketScreen(),
           AboutScreen(),
         ],
         onPageChanged: (index) {
