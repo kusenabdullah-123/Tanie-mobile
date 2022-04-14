@@ -250,7 +250,7 @@ class MainScreen extends StatelessWidget {
                       child: Text("Harga pasar"),
                     ),
                     Container(
-                        height: 132,
+                        height: 134,
                         width: MediaQuery.of(context).size.width * 0.90,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
@@ -277,7 +277,7 @@ class MainScreen extends StatelessWidget {
                           ),
                         )),
                     Container(
-                        height: 132,
+                        height: 134,
                         width: MediaQuery.of(context).size.width * 0.90,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
@@ -304,7 +304,7 @@ class MainScreen extends StatelessWidget {
                           ),
                         )),
                     Container(
-                        height: 132,
+                        height: 134,
                         width: MediaQuery.of(context).size.width * 0.90,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
