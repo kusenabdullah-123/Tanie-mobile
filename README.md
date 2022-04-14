@@ -1,16 +1,46 @@
-# tanie
 
-A new Flutter project.
+# Tanie Apps
 
-## Getting Started
+Mobile Apps build with Flutter Sdk
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Run Locally
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Clone the project
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+  git clone https://github.com/kusenabdullah-123/Tanie-mobile
+
+Go to the project directory
+
+```
+  Go Folder
+```bash
+cd Tanie-mobile
+```
+
+Start the server
+
+```bash
+  flutter run
+```
+
+Start the server
+
+```bash
+  flutter run
+```
+
+
+## Authors
+
+- [@KusenaDev](https://github.com/kusenabdullah-123)
+
+- [@DerrylYouri](https://github.com/derryl06)
+
+- [@DediKurniawan](https://github.com/dedikurniawanx)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+

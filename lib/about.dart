@@ -51,7 +51,7 @@ class AboutScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(bottom: 10),
+                      margin: const EdgeInsets.only(bottom: 10),
                       height: MediaQuery.of(context).size.height * 0.22,
                       width: MediaQuery.of(context).size.width * 1,
                       decoration: const BoxDecoration(
@@ -61,13 +61,13 @@ class AboutScreen extends StatelessWidget {
                     ),
                     Container(
                       margin: const EdgeInsets.only(bottom: 10),
-                      padding: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(2),
                       child: Row(
                         children: [
                           const Image(image: AssetImage('assets/blog1.png')),
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: 8, top: 5, bottom: 5),
+                                left: 5, top: 5, bottom: 5),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
@@ -86,8 +86,8 @@ class AboutScreen extends StatelessWidget {
                           )
                         ],
                       ),
-                      height: MediaQuery.of(context).size.height * 0.12,
-                      width: MediaQuery.of(context).size.height * 1,
+                      height: MediaQuery.of(context).size.height * 0.13,
+                      width: MediaQuery.of(context).size.width * 1,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
@@ -101,7 +101,7 @@ class AboutScreen extends StatelessWidget {
                           const Image(image: AssetImage('assets/blog1.png')),
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: 8, top: 5, bottom: 5),
+                                left: 5, top: 5, bottom: 5),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
@@ -120,8 +120,8 @@ class AboutScreen extends StatelessWidget {
                           )
                         ],
                       ),
-                      height: MediaQuery.of(context).size.height * 0.12,
-                      width: MediaQuery.of(context).size.height * 1,
+                      height: MediaQuery.of(context).size.height * 0.13,
+                      width: MediaQuery.of(context).size.width * 1,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
@@ -135,7 +135,7 @@ class AboutScreen extends StatelessWidget {
                           const Image(image: AssetImage('assets/blog1.png')),
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: 8, top: 5, bottom: 5),
+                                left: 5, top: 5, bottom: 5),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
@@ -154,8 +154,8 @@ class AboutScreen extends StatelessWidget {
                           )
                         ],
                       ),
-                      height: MediaQuery.of(context).size.height * 0.12,
-                      width: MediaQuery.of(context).size.height * 1,
+                      height: MediaQuery.of(context).size.height * 0.13,
+                      width: MediaQuery.of(context).size.width * 1,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
@@ -169,7 +169,7 @@ class AboutScreen extends StatelessWidget {
                           const Image(image: AssetImage('assets/blog1.png')),
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: 8, top: 5, bottom: 5),
+                                left: 5, top: 5, bottom: 5),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
@@ -188,8 +188,8 @@ class AboutScreen extends StatelessWidget {
                           )
                         ],
                       ),
-                      height: MediaQuery.of(context).size.height * 0.12,
-                      width: MediaQuery.of(context).size.height * 1,
+                      height: MediaQuery.of(context).size.height * 0.13,
+                      width: MediaQuery.of(context).size.width * 1,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(

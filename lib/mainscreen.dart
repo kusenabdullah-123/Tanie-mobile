@@ -137,7 +137,7 @@ class MainScreen extends StatelessWidget {
                         ),
                       )
                     ]),
-                height: MediaQuery.of(context).size.height * 0.15,
+                height: MediaQuery.of(context).size.height * 0.20,
                 width: MediaQuery.of(context).size.width * 1,
                 decoration: const BoxDecoration(
                     color: Color.fromRGBO(54, 176, 132, 1),
@@ -250,7 +250,7 @@ class MainScreen extends StatelessWidget {
                       child: Text("Harga pasar"),
                     ),
                     Container(
-                        height: 125,
+                        height: 132,
                         width: MediaQuery.of(context).size.width * 0.90,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
@@ -277,7 +277,7 @@ class MainScreen extends StatelessWidget {
                           ),
                         )),
                     Container(
-                        height: 125,
+                        height: 132,
                         width: MediaQuery.of(context).size.width * 0.90,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
@@ -304,7 +304,7 @@ class MainScreen extends StatelessWidget {
                           ),
                         )),
                     Container(
-                        height: 125,
+                        height: 132,
                         width: MediaQuery.of(context).size.width * 0.90,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(

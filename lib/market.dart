@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class MarketScreen extends StatelessWidget {
@@ -93,7 +91,7 @@ class MarketScreen extends StatelessWidget {
                         ),
                       )
                     ]),
-                height: MediaQuery.of(context).size.height * 0.15,
+                height: MediaQuery.of(context).size.height * 0.18,
                 width: MediaQuery.of(context).size.width * 1,
                 decoration: const BoxDecoration(
                     color: Color.fromRGBO(54, 176, 132, 1),
@@ -114,7 +112,7 @@ class MarketScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                        height: 127,
+                        height: 133,
                         width: MediaQuery.of(context).size.width * 0.95,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
@@ -141,7 +139,7 @@ class MarketScreen extends StatelessWidget {
                           ),
                         )),
                     Container(
-                        height: 127,
+                        height: 133,
                         width: MediaQuery.of(context).size.width * 0.95,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
@@ -168,7 +166,7 @@ class MarketScreen extends StatelessWidget {
                           ),
                         )),
                     Container(
-                        height: 127,
+                        height: 133,
                         width: MediaQuery.of(context).size.width * 0.95,
                         margin: const EdgeInsets.only(bottom: 10),
                         decoration: BoxDecoration(
