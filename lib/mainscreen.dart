@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'detailpasar.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -249,87 +250,82 @@ class MainScreen extends StatelessWidget {
                       padding: EdgeInsets.only(bottom: 10),
                       child: Text("Harga pasar"),
                     ),
-                    Container(
-                        height: 134,
-                        width: MediaQuery.of(context).size.width * 0.90,
-                        margin: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                                width: 2,
-                                color: const Color.fromRGBO(152, 152, 152, 1))),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 10, left: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "Cabai Hijau  Kecil",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              Text(
-                                "Rp 33.000/kg",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              Image(image: AssetImage('assets/chart.png'))
-                            ],
-                          ),
-                        )),
-                    Container(
-                        height: 134,
-                        width: MediaQuery.of(context).size.width * 0.90,
-                        margin: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                                width: 2,
-                                color: const Color.fromRGBO(152, 152, 152, 1))),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 10, left: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "Cabai Hijau  Kecil",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              Text(
-                                "Rp 33.000/kg",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              Image(image: AssetImage('assets/chart.png'))
-                            ],
-                          ),
-                        )),
-                    Container(
-                        height: 134,
-                        width: MediaQuery.of(context).size.width * 0.90,
-                        margin: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                                width: 2,
-                                color: const Color.fromRGBO(152, 152, 152, 1))),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 10, left: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "Cabai Hijau  Kecil",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              Text(
-                                "Rp 33.000/kg",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              Image(image: AssetImage('assets/chart.png'))
-                            ],
-                          ),
-                        )),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) {
+                          return const DetailPasarScreen(
+                              nama: "Cabai Hijau  Kecil");
+                        }));
+                      },
+                      child: Container(
+                          height: 134,
+                          width: MediaQuery.of(context).size.width * 0.90,
+                          margin: const EdgeInsets.only(bottom: 10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                  width: 2,
+                                  color:
+                                      const Color.fromRGBO(152, 152, 152, 1))),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 10, left: 8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Cabai Hijau  Kecil",
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                                Text(
+                                  "Rp 33.000/kg",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Image(image: AssetImage('assets/chart.png'))
+                              ],
+                            ),
+                          )),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) {
+                          return const DetailPasarScreen(
+                              nama: "Cabai Hijau Besar");
+                        }));
+                      },
+                      child: Container(
+                          height: 134,
+                          width: MediaQuery.of(context).size.width * 0.90,
+                          margin: const EdgeInsets.only(bottom: 10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                  width: 2,
+                                  color:
+                                      const Color.fromRGBO(152, 152, 152, 1))),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 10, left: 8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Cabai Hijau Besar",
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                                Text(
+                                  "Rp 33.000/kg",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Image(image: AssetImage('assets/chart.png'))
+                              ],
+                            ),
+                          )),
+                    ),
                   ],
                 ),
               )

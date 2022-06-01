@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_bar/bottom_bar.dart';
 import 'mainscreen.dart';
-import 'about.dart';
+import 'blog.dart';
 import 'market.dart';
+import 'profile.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -24,6 +25,7 @@ class _HomeState extends State<Home> {
           MainScreen(),
           MarketScreen(),
           AboutScreen(),
+          ProfileScreen()
         ],
         onPageChanged: (index) {
           setState(() => _currentPage = index);

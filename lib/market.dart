@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'detailpasar.dart';
 
 class MarketScreen extends StatelessWidget {
   const MarketScreen({Key? key}) : super(key: key);
@@ -111,87 +112,118 @@ class MarketScreen extends StatelessWidget {
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
-                    Container(
-                        height: 133,
-                        width: MediaQuery.of(context).size.width * 0.95,
-                        margin: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                                width: 2,
-                                color: const Color.fromRGBO(152, 152, 152, 1))),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 10, left: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "Cabai Hijau  Kecil",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              Text(
-                                "Rp 33.000/kg",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              Image(image: AssetImage('assets/chart.png'))
-                            ],
-                          ),
-                        )),
-                    Container(
-                        height: 133,
-                        width: MediaQuery.of(context).size.width * 0.95,
-                        margin: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                                width: 2,
-                                color: const Color.fromRGBO(152, 152, 152, 1))),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 10, left: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "Gula Pasir",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              Text(
-                                "Rp 33.000/kg",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              Image(image: AssetImage('assets/chart.png'))
-                            ],
-                          ),
-                        )),
-                    Container(
-                        height: 133,
-                        width: MediaQuery.of(context).size.width * 0.95,
-                        margin: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                                width: 2,
-                                color: const Color.fromRGBO(152, 152, 152, 1))),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 10, left: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "MInyak Goreng",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              Text(
-                                "Rp 33.000/kg",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              Image(image: AssetImage('assets/chart.png'))
-                            ],
-                          ),
-                        )),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) {
+                          return const DetailPasarScreen(
+                              nama: "Cabai Hijau Besar");
+                        }));
+                      },
+                      child: Container(
+                          height: 133,
+                          width: MediaQuery.of(context).size.width * 0.95,
+                          margin: const EdgeInsets.only(bottom: 10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                  width: 2,
+                                  color:
+                                      const Color.fromRGBO(152, 152, 152, 1))),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 10, left: 8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Cabai Hijau  Kecil",
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                                Text(
+                                  "Rp 33.000/kg",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Image(image: AssetImage('assets/chart.png'))
+                              ],
+                            ),
+                          )),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) {
+                          return const DetailPasarScreen(nama: "Jagung Manis");
+                        }));
+                      },
+                      child: Container(
+                          height: 133,
+                          width: MediaQuery.of(context).size.width * 0.95,
+                          margin: const EdgeInsets.only(bottom: 10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                  width: 2,
+                                  color:
+                                      const Color.fromRGBO(152, 152, 152, 1))),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 10, left: 8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Jagung Manis",
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                                Text(
+                                  "Rp 33.000/kg",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Image(image: AssetImage('assets/chart.png'))
+                              ],
+                            ),
+                          )),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) {
+                          return const DetailPasarScreen(nama: "Beras Putih");
+                        }));
+                      },
+                      child: Container(
+                          height: 133,
+                          width: MediaQuery.of(context).size.width * 0.95,
+                          margin: const EdgeInsets.only(bottom: 10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                  width: 2,
+                                  color:
+                                      const Color.fromRGBO(152, 152, 152, 1))),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 10, left: 8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Beras Putih",
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                                Text(
+                                  "Rp 33.000/kg",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Image(image: AssetImage('assets/chart.png'))
+                              ],
+                            ),
+                          )),
+                    )
                   ],
                 ),
               )
