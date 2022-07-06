@@ -63,11 +63,11 @@ class ProfileScreen extends StatelessWidget {
                                     image: AssetImage("assets/users.png"))),
                           ),
                           Column(
-                            children: const [
-                              Text("Derryl Youri",
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                              Text("Customers Pertama")
+                            children: [
+                              Text(storage.getItem("nama"),
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold)),
+                              const Text("Customers Pertama")
                             ],
                           )
                         ],
@@ -147,9 +147,9 @@ class ProfileScreen extends StatelessWidget {
                                 child: Icon(Icons.phone_android)),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text("Telepon"),
-                                Text("083851379273")
+                              children: [
+                                const Text("Telepon"),
+                                Text(storage.getItem("no"))
                               ],
                             )
                           ],

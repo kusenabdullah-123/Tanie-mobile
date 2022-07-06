@@ -53,6 +53,12 @@ class Forms extends State<Login> {
                           onSaved: (value) {
                             storage.setItem("no", value);
                           },
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'No Tidak Boleh Kosong';
+                            }
+                            return null;
+                          },
                           decoration: const InputDecoration(
                               hintText: "Masukan No Telp Anda",
                               labelText: "No Telp",
