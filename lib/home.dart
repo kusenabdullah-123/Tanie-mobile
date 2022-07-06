@@ -21,10 +21,10 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: PageView(
         controller: _pageController,
-        children: const [
-          MainScreen(),
-          MarketScreen(),
-          AboutScreen(),
+        children: [
+          const MainScreen(),
+          const MarketScreen(),
+          const AboutScreen(),
           ProfileScreen()
         ],
         onPageChanged: (index) {

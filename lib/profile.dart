@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:localstorage/localstorage.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
-
+  ProfileScreen({Key? key}) : super(key: key);
+  final LocalStorage storage = LocalStorage('users');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
