@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-import 'login.dart';
+import 'register.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({Key? key}) : super(key: key);
@@ -35,12 +35,12 @@ class _IntroPageState extends State<IntroPage> {
       pages: getPages(),
       onDone: () {
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (_) => const Login()),
+          MaterialPageRoute(builder: (_) => const Register()),
         );
       },
       onSkip: () {
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (_) => const Login()),
+          MaterialPageRoute(builder: (_) => const Register()),
         );
       },
       showBackButton: false,

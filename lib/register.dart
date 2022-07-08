@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'login.dart';
 import 'package:localstorage/localstorage.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
   Forms createState() => Forms();
 }
 
-class Forms extends State<Login> {
-  var username = "";
-  var password = "";
+class Forms extends State<Register> {
   final _formKey = GlobalKey<FormState>();
   final LocalStorage storage = LocalStorage('users');
   @override
@@ -51,6 +49,38 @@ class Forms extends State<Login> {
                     child: Column(
                       children: [
                         TextFormField(
+                          keyboardType: TextInputType.number,
+                          onSaved: (value) {
+                            storage.setItem("no", value);
+                          },
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'No Tidak Boleh Kosong';
+                            }
+                            return null;
+                          },
+                          decoration: const InputDecoration(
+                              hintText: "Masukan No Telp Anda",
+                              labelText: "No Telp",
+                              icon: Icon(Icons.phone)),
+                        ),
+                        TextFormField(
+                          keyboardType: TextInputType.text,
+                          onSaved: (value) {
+                            storage.setItem("nama", value);
+                          },
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Nama Tidak Boleh Kosong';
+                            }
+                            return null;
+                          },
+                          decoration: const InputDecoration(
+                              hintText: "Masukan Nama Anda",
+                              labelText: "Nama",
+                              icon: Icon(Icons.person)),
+                        ),
+                        TextFormField(
                           keyboardType: TextInputType.text,
                           onSaved: (value) {
                             storage.setItem("username", value);
@@ -59,7 +89,6 @@ class Forms extends State<Login> {
                             if (value == null || value.isEmpty) {
                               return 'Username Tidak Boleh Kosong';
                             }
-                            username = value;
                             return null;
                           },
                           decoration: const InputDecoration(
@@ -70,12 +99,8 @@ class Forms extends State<Login> {
                         TextFormField(
                           obscureText: true,
                           keyboardType: TextInputType.text,
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Password Tidak Boleh Kosong';
-                            }
-                            password = value;
-                            return null;
+                          onSaved: (value) {
+                            storage.setItem("password", value);
                           },
                           decoration: const InputDecoration(
                               hintText: "Masukan Password Anda",
@@ -85,47 +110,11 @@ class Forms extends State<Login> {
                         ElevatedButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                if (username == storage.getItem("username")) {
-                                  if (password == storage.getItem("password")) {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) {
-                                      return const Home();
-                                    }));
-                                  } else {
-                                    showDialog<String>(
-                                      context: context,
-                                      builder: (BuildContext context) =>
-                                          AlertDialog(
-                                        title: const Text('Failed Login '),
-                                        content: const Text('Password Salah'),
-                                        actions: <Widget>[
-                                          TextButton(
-                                            onPressed: () =>
-                                                Navigator.pop(context, 'OK'),
-                                            child: const Text('OK'),
-                                          ),
-                                        ],
-                                      ),
-                                    );
-                                  }
-                                } else {
-                                  showDialog<String>(
-                                    context: context,
-                                    builder: (BuildContext context) =>
-                                        AlertDialog(
-                                      title: const Text('Failed Login '),
-                                      content: const Text('User Not Found'),
-                                      actions: <Widget>[
-                                        TextButton(
-                                          onPressed: () =>
-                                              Navigator.pop(context, 'OK'),
-                                          child: const Text('OK'),
-                                        ),
-                                      ],
-                                    ),
-                                  );
-                                }
+                                _formKey.currentState?.save();
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (BuildContext context) {
+                                  return const Login();
+                                }));
                               }
                             },
                             child: const Text("Submit"))
